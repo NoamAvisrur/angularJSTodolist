@@ -2,6 +2,10 @@ body{
    font-family: arial;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 header {
    text-align: center;
 }
@@ -129,7 +133,6 @@ li span:hover{
     }
     form[name=newItem] input[type=text] {
     width: 70%;
-    }
 }
 @media screen and (min-width: 550px) and (max-width: 900px) {
     #items_container{
