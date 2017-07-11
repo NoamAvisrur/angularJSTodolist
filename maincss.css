@@ -1,0 +1,149 @@
+body{
+   font-family: arial;
+}
+
+header {
+   text-align: center;
+}
+
+header h1{
+    margin: 1rem;
+    font-size: 3rem;
+    color: #444;
+}
+
+main{
+   text-align: center;
+}
+
+main form{
+    width: 30%;
+    margin: auto;
+}
+
+form[name=newItem] input[type=text]{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #ddd;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+form[name=newItem] input[type=submit]{
+    height: 30px;
+    box-sizing: content-box;
+    border-radius: 0 5px 5px 0;
+    background-color: #faf6f6;
+    outline: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+#items_container{
+    width: 30%;
+    margin: auto;
+}
+
+.item, .item_preview{
+    background: #faf6f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    word-break: break-word;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+.item_preview{
+    border-left: 3px solid #ccc;
+    padding: 1.3rem;
+}
+.item{
+    border-left: 3px solid #ff5722;
+}
+
+li button{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: tomato;
+    opacity: 0.7;
+}
+
+ul{
+   padding: 0;
+}
+
+li button:hover{
+   opacity: 1;
+   cursor: pointer;
+}
+
+li span{
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+li span:hover{
+    color: #666;
+}
+
+.editList{
+    width: auto;
+    margin: 0;
+}
+.editList input[type=submit]{
+    display: none;
+}
+
+.editList input[type=text]{
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.list_details{
+    width: 100%;
+    background-color: #eee;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.date{
+    font-size: 10px;
+}
+
+/*------------------ media queries --------------------*/
+
+@media screen and (max-width:550px) {
+    #items_container{
+        width: 90%;
+    }
+    main form {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    form[name=newItem] input[type=text] {
+    width: 70%;
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 900px) {
+    #items_container{
+        width: 70%;
+    }
+    main form {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 900px) and (max-width: 1300px) {
+    #items_container{
+        width: 50%;
+    }
+    main form {
+        width: 50%;
+    }
+}    
