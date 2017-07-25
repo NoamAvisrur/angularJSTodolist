@@ -9,13 +9,12 @@ app.controller('listController', function(DataService){
     this.data = DataService.data;
 
     this.submitItem = function(){
-        DataService.data.unshift({
-            item: this.mylist.item
-        })
-
-    this.mylist = {};     
+        DataService.data.unshift(this.mylist.item);
+        this.mylist = {};     
     }
-
+    
+    this.console = function(){console.log(DataService.data)}
+    
 })
 
 
