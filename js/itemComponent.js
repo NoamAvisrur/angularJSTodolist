@@ -2,12 +2,12 @@ app.component('itemComponent', {
   template: `
                 <li class="item">
                      <span ng-dblclick="citem.edit($event)">{{citem.listitem}}</span>
-                     <button ng-click="citem.onDelete({item: this.listitem})">&#10006;</button>
+                     <button ng-click="citem.onDelete({item: citem.listitem})">&#10006;</button>
                 </li>`,
   bindings: {
        listitem: "<",
-       onDelete : "&",
-       onUpdate : "&"
+       onDelete: '&',
+       onUpdate: "&"
   },
   controller: function($scope, $compile, $element) {
      
